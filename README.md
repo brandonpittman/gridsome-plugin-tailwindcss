@@ -10,8 +10,8 @@ don't supply a config file path, `./tailwind.js` will be used by default.
 plugins: [
   {
     use: 'gridsome-plugin-tailwindcss',
-      options: {
-        config: './some/file/js'
+    options: {
+      config: './some/file/js'
     }
   }
 ]
