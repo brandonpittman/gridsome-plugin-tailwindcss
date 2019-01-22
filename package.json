@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/brandonpittman/gridsome-plugin-tailwindcss/issues"
   },
-  "homepage": "https://github.com/brandonpittman/gridsome-plugin-tailwindcss#readme"
+  "homepage": "https://github.com/brandonpittman/gridsome-plugin-tailwindcss#readme",
+  "dependencies": {
+    "tailwindcss": "^0.7.3"
+  }
 }
