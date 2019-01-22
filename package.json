@@ -1,6 +1,6 @@
 {
   "name": "gridsome-plugin-tailwindcss",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Add Tailwind to a Gridsome project.",
   "main": "index.js",
   "scripts": {
