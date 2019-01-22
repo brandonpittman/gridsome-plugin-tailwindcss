@@ -8,13 +8,15 @@ class TailwindPlugin {
   }
 
   constructor(api, options) {
+    const tailwindOptions = options
+
     api.chainWebpack(config => {
       config.module
         .rule('css') // or sass, scss, less, postcss, stylus
         .oneOf('normal') // or module
         .use('postcss-loader')
         .tap(options => {
-          options.plugins.unshift(tailwindcss(options.config))
+          options.plugins.unshift(tailwindcss(tailwindOptions.config))
           return options
         })
     })
