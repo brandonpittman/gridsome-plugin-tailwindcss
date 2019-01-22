@@ -8,11 +8,11 @@ don't supply a config file path, `./tailwind.js` will be used by default.
 
 ```javascript
 plugins: [
-	{
-		use: 'gridsome-plugin-tailwindcss',
-		options: {
-			config: './some/file/js'
-		}
-	}
+  {
+    use: 'gridsome-plugin-tailwindcss',
+      options: {
+        config: './some/file/js'
+    }
+  }
 ]
 ```
