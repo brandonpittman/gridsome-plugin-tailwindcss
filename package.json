@@ -1,0 +1,24 @@
+{
+  "name": "gridsome-plugin-tailwindcss",
+  "version": "1.0.0",
+  "description": "Add Tailwind to a Gridsome project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/brandonpittman/gridsome-plugin-tailwindcss.git"
+  },
+  "keywords": [
+    "tailwind",
+    "gridsome",
+    "tailwindcss"
+  ],
+  "author": "Brandon Pittman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brandonpittman/gridsome-plugin-tailwindcss/issues"
+  },
+  "homepage": "https://github.com/brandonpittman/gridsome-plugin-tailwindcss#readme"
+}
