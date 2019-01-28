@@ -22,6 +22,6 @@
   },
   "homepage": "https://github.com/brandonpittman/gridsome-plugin-tailwindcss#readme",
   "dependencies": {
-    "tailwindcss": "latest"
+    "tailwindcss": "^0.7.3"
   }
 }
