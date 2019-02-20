@@ -13,6 +13,7 @@
   "keywords": [
     "tailwind",
     "gridsome",
+    "gridsome-plugin",
     "tailwindcss"
   ],
   "author": "Brandon Pittman",
