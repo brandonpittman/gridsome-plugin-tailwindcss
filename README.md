@@ -1,5 +1,7 @@
 # gridsome-plugin-tailwindcss
 
+[**Read this first**](https://www.brandonpittman.net/tailwind-purge-config)
+
 This plugin will add [Tailwind](http://tailwindcss.com) to your
 [Gridsome](http://gridsome.org) project.
 
