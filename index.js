@@ -11,10 +11,6 @@ class TailwindPlugin {
 
   constructor(api, options) {
     const tailwindOptions = options
-    if (!fs.existsSync(tailwindOptions)) {
-      console.error("Tailwind config file doesn't exist. Creating file now.")
-      execSync(`./node_modules/.bin/tailwind init ${tailwindOptions.config}`)
-    }
 
     api.chainWebpack(config => {
       config.module
