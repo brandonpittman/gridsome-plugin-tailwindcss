@@ -1,26 +1,26 @@
-const tailwindcss = require('tailwindcss')
+const tailwindcss = require("tailwindcss");
 
 class TailwindPlugin {
   static defaultOptions() {
     return {
-      config: './tailwind.js'
-    }
+      config: "./tailwind.config.js"
+    };
   }
 
   constructor(api, options) {
-    const tailwindOptions = options
+    const tailwindOptions = options;
 
     api.chainWebpack(config => {
       config.module
-        .rule('css') // or sass, scss, less, postcss, stylus
-        .oneOf('normal') // or module
-        .use('postcss-loader')
+        .rule("css")
+        .oneOf("normal")
+        .use("postcss-loader")
         .tap(options => {
-          options.plugins.unshift(tailwindcss(tailwindOptions.config))
-          return options
-        })
-    })
+          options.plugins.unshift(tailwindcss(tailwindOptions.config));
+          return options;
+        });
+    });
   }
 }
 
-module.exports = TailwindPlugin
+module.exports = TailwindPlugin;
