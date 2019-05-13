@@ -23,6 +23,6 @@
   },
   "homepage": "https://github.com/brandonpittman/gridsome-plugin-tailwindcss#readme",
   "dependencies": {
-    "tailwindcss": "next"
+    "tailwindcss": "latest"
   }
 }
