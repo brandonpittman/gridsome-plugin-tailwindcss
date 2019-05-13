@@ -2,7 +2,7 @@
   "name": "gridsome-plugin-tailwindcss",
   "version": "1.2.5",
   "description": "Add Tailwind to a Gridsome project.",
-  "main": "index.js",
+  "main": "gridsome.server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
