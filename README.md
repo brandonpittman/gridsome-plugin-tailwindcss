@@ -2,7 +2,7 @@
 
 [Example project](http://github.com/brandonpittman/gridsome-plugin-tailwindcss-ffs)
 
-This plugin will add [Tailwind](http://tailwindcss.com) to your [Gridsome](http://gridsome.org) project. You're on your own for adding the actually `@tailwind` directives in your own CSS. Adding them for you would be a hassle for you in the long run.
+This plugin will add [Tailwind](http://tailwindcss.com) to your [Gridsome](http://gridsome.org) project. You're on your own for adding the actual `@tailwind` directives in your own CSS. Adding them for you would be a hassle for you in the long run.
 
 To use this plugin, run `npm install -D gridsome-plugin-tailwindcss` add the following to your `gridsome.config.js`.
 
