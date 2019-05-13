@@ -1,17 +1,16 @@
 const tailwindcss = require('tailwindcss')
-const fs = require('fs')
-const { execSync } = require('child_process')
 
 class TailwindPlugin {
   static defaultOptions() {
     return {
-      config: './tailwind.config.js',
+      config: './tailwind.config.js'
     }
   }
 
   constructor(api, options) {
     const tailwindOptions = options
 
+    // stupid chainWebpack…
     api.chainWebpack(config => {
       config.module
         .rule('css')
@@ -26,4 +25,3 @@ class TailwindPlugin {
 }
 
 module.exports = TailwindPlugin
-
