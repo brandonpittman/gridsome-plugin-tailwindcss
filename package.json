@@ -23,6 +23,8 @@
   },
   "homepage": "https://github.com/brandonpittman/gridsome-plugin-tailwindcss#readme",
   "dependencies": {
+    "@fullhuman/postcss-purgecss": "^1.2.0",
+    "autoprefixer": "^9.5.1",
     "tailwindcss": "latest"
   }
 }

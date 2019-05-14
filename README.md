@@ -13,8 +13,19 @@ plugins: [
   {
     use: 'gridsome-plugin-tailwindcss',
     // options: {
-    //   config: './some/file/js'
+    //   tailwindConfig: './some/file/js',
+	//   purgeConfig: {},
+	//   shouldPurge: true
     // }
   }
 ]
 ```
+
+## autoprefixer
+
+Included by default. Pass `shouldAutoprefix: false` to disable.
+
+## PurgeCSS
+
+PurgeCSS is enabled by default. If you'd like to disable it, pass `shouldPurge:
+false` to the plugin options object.
