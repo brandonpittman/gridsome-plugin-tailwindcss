@@ -21,6 +21,14 @@ plugins: [
 ]
 ```
 
+## postcss-import
+
+Included by default. Pass `shouldImport: false` to disable.
+
+## postcss-nesting
+
+Included by default. Pass `shouldNest: false` to disable.
+
 ## autoprefixer
 
 Included by default. Pass `shouldAutoprefix: false` to disable.
