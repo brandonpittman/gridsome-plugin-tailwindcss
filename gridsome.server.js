@@ -1,5 +1,12 @@
 function TailwindPlugin(api, options) {
-  const { tailwindConfig, purgeConfig, shouldPurge, shouldAutoprefix } = options
+  const {
+    tailwindConfig,
+    purgeConfig,
+    shouldNest,
+    shouldImport,
+    shouldPurge,
+    shouldAutoprefix,
+  } = options
 
   api.chainWebpack(config => {
     config.module
@@ -7,6 +14,10 @@ function TailwindPlugin(api, options) {
       .oneOf('normal')
       .use('postcss-loader')
       .tap(options => {
+        shouldImport && options.plugins.push(require('postcss-import')())
+
+        shouldNest && options.plugins.push(require('postcss-nesting')())
+
         options.plugins.unshift(require('tailwindcss')(tailwindConfig))
 
         shouldAutoprefix && options.plugins.push(require('autoprefixer'))
@@ -25,6 +36,8 @@ function TailwindPlugin(api, options) {
 TailwindPlugin.defaultOptions = () => ({
   tailwindConfig: './tailwind.config.js',
   shouldPurge: true,
+  shouldImport: true,
+  shouldNest: true,
   purgeConfig: {
     content: [
       './src/**/*.vue',
@@ -48,4 +61,3 @@ TailwindPlugin.defaultOptions = () => ({
 })
 
 module.exports = TailwindPlugin
-
