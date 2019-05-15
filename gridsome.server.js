@@ -16,7 +16,7 @@ function TailwindPlugin(api, options) {
       .tap(options => {
         shouldImport && options.plugins.push(require('postcss-import')())
 
-        shouldNest && options.plugins.push(require('postcss-nesting')())
+        shouldNest && options.plugins.push(require('postcss-nested')())
 
         options.plugins.unshift(require('tailwindcss')(tailwindConfig))
 

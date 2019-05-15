@@ -47,9 +47,9 @@ false` to the plugin options object.
 
 [postcss-import](https://github.com/postcss/postcss-import) included by default. Pass `shouldImport: false` to disable.
 
-## postcss-nesting
+## postcss-nested
 
-[postcss-nesting](https://github.com/jonathantneal/postcss-nesting) included by default. Pass `shouldNest: false` to disable.
+[postcss-nested](https://github.com/postcss/postcss-nested) included by default. Pass `shouldNest: false` to disable.
 
 ## autoprefixer
 
