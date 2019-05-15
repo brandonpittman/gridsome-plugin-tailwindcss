@@ -5,7 +5,7 @@ function TailwindPlugin(api, options) {
     shouldNest,
     shouldImport,
     shouldPurge,
-    shouldAutoprefix,
+    shouldAutoprefix
   } = options
 
   api.chainWebpack(config => {
@@ -25,7 +25,7 @@ function TailwindPlugin(api, options) {
         process.env.NODE_ENV === 'production' &&
           shouldPurge &&
           options.plugins.push(
-            require('@fullhuman/postcss-purgecss')(purgeConfig),
+            require('@fullhuman/postcss-purgecss')(purgeConfig)
           )
 
         return options
@@ -43,9 +43,11 @@ TailwindPlugin.defaultOptions = () => ({
       './src/**/*.vue',
       './src/**/*.js',
       './src/**/*.jsx',
+      './src/**/*.ts',
+      './src/**/*.tsx',
       './src/**/*.html',
       './src/**/*.pug',
-      './src/**/*.md',
+      './src/**/*.md'
     ],
     whitelist: [
       'body',
@@ -54,10 +56,10 @@ TailwindPlugin.defaultOptions = () => ({
       'a',
       'g-image',
       'g-image--lazy',
-      'g-image--loaded',
+      'g-image--loaded'
     ],
-    defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || [],
-  },
+    defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || []
+  }
 })
 
 module.exports = TailwindPlugin
