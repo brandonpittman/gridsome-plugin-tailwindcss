@@ -19,7 +19,7 @@ in `main.js`. But it's your choice! 😄
 
 To use this plugin, run `npm install -D gridsome-plugin-tailwindcss` add the following to your `gridsome.config.js`.
 
-If you don't supply a config file path, `./tailwind.config.js` will be used by default.
+If you don't supply a config file path, Tailwind defaults will be used by default.
 
 ```javascript
 modules.exports = {
@@ -29,10 +29,10 @@ plugins: [
     options: {
      tailwindConfig: './some/file/js',
 	 purgeConfig: {},
+	 presentEnvConfig: {},
 	 shouldPurge: true,
 	 shouldImport: true,
 	 shouldTimeTravel: true,
-	 presentEnvConfig: {}
     }
   }
 ]
