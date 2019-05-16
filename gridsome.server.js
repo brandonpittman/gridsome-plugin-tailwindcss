@@ -38,7 +38,7 @@ TailwindPlugin.defaultOptions = () => ({
   shouldImport: true,
   shouldTimeTravel: true,
   presentEnvConfig: {
-    stage: 0
+    stage: 0,
   },
   purgeConfig: {
     content: [

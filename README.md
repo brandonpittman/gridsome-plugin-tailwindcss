@@ -31,8 +31,8 @@ plugins: [
 	 purgeConfig: {},
 	 shouldPurge: true,
 	 shouldImport: true,
-	 shouldNest: true,
-	 shouldAutoprefix: true,
+	 shouldTimeTravel: true,
+	 presentEnvConfig: {}
     }
   }
 ]
@@ -49,9 +49,5 @@ false` to the plugin options object.
 
 ## postcss-nested
 
-[postcss-nested](https://github.com/postcss/postcss-nested) included by default. Pass `shouldNest: false` to disable.
-
-## autoprefixer
-
-[Autoprefixer](https://www.github.com/postcss/autoprefixer) included by default. Pass `shouldAutoprefix: false` to disable.
+[postcss-preset-env](https://github.com/csstools/postcss-preset-env) included by default. Pass `shouldTimeTravel: false` to disable. You may also pass a config object to the plugin as `presentEnvConfig`.
 
