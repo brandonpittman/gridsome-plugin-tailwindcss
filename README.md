@@ -47,7 +47,7 @@ false` to the plugin options object.
 
 [postcss-import](https://github.com/postcss/postcss-import) included by default. Pass `shouldImport: false` to disable.
 
-## postcss-nested
+## postcss-preset-env
 
 [postcss-preset-env](https://github.com/csstools/postcss-preset-env) included by default. Pass `shouldTimeTravel: false` to disable. You may also pass a config object to the plugin as `presentEnvConfig`.
 

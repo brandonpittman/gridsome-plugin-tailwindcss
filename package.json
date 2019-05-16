@@ -16,7 +16,9 @@
     "gridsome-plugin",
     "tailwindcss",
     "postcss",
-    "purgecss"
+    "purgecss",
+    "postcss-import",
+    "postcss-preset-env"
   ],
   "author": "Brandon Pittman",
   "license": "MIT",
