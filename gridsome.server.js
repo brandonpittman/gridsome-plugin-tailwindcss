@@ -16,7 +16,7 @@ function TailwindPlugin(api, options) {
 
   const postcssPresetEnv = require('postcss-import')(presentEnvConfig)
 
-  const = purgecss = require('@fullhuman/postcss-purgecss')(purgeConfig)
+  const purgecss = require('@fullhuman/postcss-purgecss')(purgeConfig)
 
   api.chainWebpack(config => {
     config.module
@@ -28,8 +28,7 @@ function TailwindPlugin(api, options) {
 
         options.plugins.unshift(tailwind)
 
-        shouldTimeTravel &&
-          options.plugins.push(postcssPresetEnv)
+        shouldTimeTravel && options.plugins.push(postcssPresetEnv)
 
         process.env.NODE_ENV === 'production' &&
           shouldPurge &&
