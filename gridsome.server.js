@@ -2,10 +2,10 @@ function TailwindPlugin(api, options) {
   const {
     tailwindConfig,
     purgeConfig,
-    shouldNest,
+    presentEnvConfig
     shouldImport,
     shouldPurge,
-    shouldAutoprefix
+    shouldTimeTravel,
   } = options
 
   api.chainWebpack(config => {
@@ -16,16 +16,15 @@ function TailwindPlugin(api, options) {
       .tap(options => {
         shouldImport && options.plugins.push(require('postcss-import')())
 
-        shouldNest && options.plugins.push(require('postcss-nested')())
-
         options.plugins.unshift(require('tailwindcss')(tailwindConfig))
 
-        shouldAutoprefix && options.plugins.push(require('autoprefixer'))
+        shouldTimeTravel &&
+          options.plugins.push(require('postcss-preset-env')(presentEnvConfig))
 
         process.env.NODE_ENV === 'production' &&
           shouldPurge &&
           options.plugins.push(
-            require('@fullhuman/postcss-purgecss')(purgeConfig)
+            require('@fullhuman/postcss-purgecss')(purgeConfig),
           )
 
         return options
@@ -37,7 +36,10 @@ TailwindPlugin.defaultOptions = () => ({
   tailwindConfig: './tailwind.config.js',
   shouldPurge: true,
   shouldImport: true,
-  shouldNest: true,
+  shouldTimeTravel: true,
+  presentEnvConfig: {
+    stage: 0
+  },
   purgeConfig: {
     content: [
       './src/**/*.vue',
@@ -47,7 +49,7 @@ TailwindPlugin.defaultOptions = () => ({
       './src/**/*.tsx',
       './src/**/*.html',
       './src/**/*.pug',
-      './src/**/*.md'
+      './src/**/*.md',
     ],
     whitelist: [
       'body',
@@ -56,10 +58,10 @@ TailwindPlugin.defaultOptions = () => ({
       'a',
       'g-image',
       'g-image--lazy',
-      'g-image--loaded'
+      'g-image--loaded',
     ],
-    defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || []
-  }
+    defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || [],
+  },
 })
 
 module.exports = TailwindPlugin
