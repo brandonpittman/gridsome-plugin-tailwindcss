@@ -8,24 +8,32 @@ function TailwindPlugin(api, options) {
     shouldTimeTravel,
   } = options
 
+  const postcssImport = require('postcss-import')()
+
+  const tailwind = tailwindConfig
+    ? require('tailwindcss')(tailwindConfig)
+    : require('tailwindcss')
+
+  const postcssPresetEnv = require('postcss-import')(presentEnvConfig)
+
+  const = purgecss = require('@fullhuman/postcss-purgecss')(purgeConfig)
+
   api.chainWebpack(config => {
     config.module
       .rule('css')
       .oneOf('normal')
       .use('postcss-loader')
       .tap(options => {
-        shouldImport && options.plugins.push(require('postcss-import')())
+        shouldImport && options.plugins.push(postcssImport)
 
-        options.plugins.unshift(require('tailwindcss')(tailwindConfig))
+        options.plugins.unshift(tailwind)
 
         shouldTimeTravel &&
-          options.plugins.push(require('postcss-preset-env')(presentEnvConfig))
+          options.plugins.push(postcssPresetEnv)
 
         process.env.NODE_ENV === 'production' &&
           shouldPurge &&
-          options.plugins.push(
-            require('@fullhuman/postcss-purgecss')(purgeConfig),
-          )
+          options.plugins.push(purgecss)
 
         return options
       })
@@ -33,10 +41,10 @@ function TailwindPlugin(api, options) {
 }
 
 TailwindPlugin.defaultOptions = () => ({
-  tailwindConfig: './tailwind.config.js',
   shouldPurge: true,
   shouldImport: true,
   shouldTimeTravel: true,
+  tailwindConfig: undefined,
   presentEnvConfig: {
     stage: 0,
   },
