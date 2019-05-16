@@ -2,7 +2,7 @@ function TailwindPlugin(api, options) {
   const {
     tailwindConfig,
     purgeConfig,
-    presentEnvConfig
+    presentEnvConfig,
     shouldImport,
     shouldPurge,
     shouldTimeTravel,
