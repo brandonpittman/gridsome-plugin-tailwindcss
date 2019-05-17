@@ -2,7 +2,7 @@ function TailwindPlugin(api, options) {
   const {
     tailwindConfig,
     purgeConfig,
-    presentEnvConfig,
+    presetEnvConfig,
     shouldImport,
     shouldPurge,
     shouldTimeTravel,
@@ -14,7 +14,7 @@ function TailwindPlugin(api, options) {
     ? require('tailwindcss')(tailwindConfig)
     : require('tailwindcss')
 
-  const postcssPresetEnv = require('postcss-import')(presentEnvConfig)
+  const postcssPresetEnv = require('postcss-import')(presetEnvConfig)
 
   const purgecss = require('@fullhuman/postcss-purgecss')(purgeConfig)
 
@@ -44,7 +44,7 @@ TailwindPlugin.defaultOptions = () => ({
   shouldImport: true,
   shouldTimeTravel: true,
   tailwindConfig: undefined,
-  presentEnvConfig: {
+  presetEnvConfig: {
     stage: 0,
   },
   purgeConfig: {
