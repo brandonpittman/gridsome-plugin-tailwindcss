@@ -29,7 +29,7 @@ plugins: [
     options: {
      tailwindConfig: './some/file/js',
 	 purgeConfig: {},
-	 presentEnvConfig: {},
+	 presetEnvConfig: {},
 	 shouldPurge: true,
 	 shouldImport: true,
 	 shouldTimeTravel: true,
@@ -49,5 +49,5 @@ false` to the plugin options object.
 
 ## postcss-preset-env
 
-[postcss-preset-env](https://github.com/csstools/postcss-preset-env) included by default. Pass `shouldTimeTravel: false` to disable. You may also pass a config object to the plugin as `presentEnvConfig`.
+[postcss-preset-env](https://github.com/csstools/postcss-preset-env) included by default. Pass `shouldTimeTravel: false` to disable. You may also pass a config object to the plugin as `presetEnvConfig`.
 
