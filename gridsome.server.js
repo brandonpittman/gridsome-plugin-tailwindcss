@@ -26,7 +26,7 @@ function TailwindPlugin(api, options) {
       .tap(options => {
         shouldImport && options.plugins.push(postcssImport)
 
-        options.plugins.unshift(tailwind)
+        options.plugins.push(tailwind)
 
         shouldTimeTravel && options.plugins.push(postcssPresetEnv)
 
