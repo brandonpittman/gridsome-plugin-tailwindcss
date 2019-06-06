@@ -14,7 +14,7 @@ function TailwindPlugin(api, options) {
     ? require('tailwindcss')(tailwindConfig)
     : require('tailwindcss')
 
-  const postcssPresetEnv = require('postcss-import')(presetEnvConfig)
+  const postcssPresetEnv = require('postcss-preset-env')(presetEnvConfig)
 
   const purgecss = require('@fullhuman/postcss-purgecss')(purgeConfig)
 
