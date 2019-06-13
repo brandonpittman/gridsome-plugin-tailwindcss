@@ -57,6 +57,7 @@ TailwindPlugin.defaultOptions = () => ({
       './src/**/*.html',
       './src/**/*.pug',
       './src/**/*.md',
+      './src/**/*.svg',
     ],
     whitelist: [
       'body',
