@@ -3,9 +3,8 @@
 [Example project](http://github.com/brandonpittman/gridsome-plugin-tailwindcss-ffs)
 
 This plugin will add [Tailwind](http://tailwindcss.com) to your
-[Gridsome](http://gridsome.org) project. You're on your own for adding the
-actual `@tailwind` directives in your own CSS. Adding them for you would be a
-hassle for you in the long run. Just add a CSS file that includes:
+[Gridsome](http://gridsome.org) project. I've gone ahead and automatically
+imported the default `tailwind.css` file from the Tailwind npm package. It's just add a CSS file that includes:
 
 ```postcss
 @tailwind base;
@@ -13,13 +12,16 @@ hassle for you in the long run. Just add a CSS file that includes:
 @tailwind utilities;
 ```
 
-…somewhere in your CSS pipeline. Can be a standalone file or in the default
-layout. Better to do it in a standalone file. I import mine as a Wepback module
-in `main.js`. But it's your choice! 😄
+You may be wondering, "Where do I add global CSS?!" Short answer, you don't.
+Long answer, read the Tailwind docs on [creating plugins][plugins] and use
+`tailwind.config.js` to add base styles and create components/utilities there.
+
+**If you need to create `tailwind.config.js`, run `./node_modules/.bin/tailwind init` to create one.
+
+[plugins]: https://tailwindcss.com/docs/plugins/#app
 
 To use this plugin, run `npm install -D gridsome-plugin-tailwindcss` add the following to your `gridsome.config.js`.
 
-If you don't supply a config file path, Tailwind defaults will be used by default.
 
 ```javascript
 modules.exports = {
@@ -38,6 +40,10 @@ plugins: [
 ]
 }
 ```
+If you don't supply a config file path, Tailwind defaults will be used.
+
+The following PostCSS plugins are also included with this plugin:
+
 ## PurgeCSS
 
 [PurgeCSS](https://www.purgecss.com/with-postcss) is enabled by default. If you'd like to disable it, pass `shouldPurge:
@@ -51,3 +57,9 @@ false` to the plugin options object.
 
 [postcss-preset-env](https://github.com/csstools/postcss-preset-env) included by default. Pass `shouldTimeTravel: false` to disable. You may also pass a config object to the plugin as `presetEnvConfig`.
 
+With this one plugin, you should be ready to use Tailwind right away. Keep your
+customization to `tailwind.config.js` whenever possible, but you can use the
+full power of Tailwind (including `@apply`) in your Vue components when
+necessary.
+
+Happy coding!
