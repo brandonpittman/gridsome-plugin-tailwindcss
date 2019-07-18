@@ -16,7 +16,7 @@ You may be wondering, "Where do I add global CSS?!" Short answer, you don't.
 Long answer, read the Tailwind docs on [creating plugins][plugins] and use
 `tailwind.config.js` to add base styles and create components/utilities there.
 
-**If you need to create `tailwind.config.js`, run `./node_modules/.bin/tailwind init` to create one.
+**If you need to create `tailwind.config.js`, run `./node_modules/.bin/tailwind init` to create one.**
 
 [plugins]: https://tailwindcss.com/docs/plugins/#app
 
@@ -25,19 +25,19 @@ To use this plugin, run `npm install -D gridsome-plugin-tailwindcss` add the fol
 
 ```javascript
 modules.exports = {
-plugins: [
-  {
-    use: 'gridsome-plugin-tailwindcss',
-    options: {
-     tailwindConfig: './some/file/js',
-      purgeConfig: {},
-      presetEnvConfig: {},
-      shouldPurge: true,
-      shouldImport: true,
-      shouldTimeTravel: true,
-    }
-  }
-]
+	plugins: [
+		{
+			use: 'gridsome-plugin-tailwindcss',
+			options: {
+			tailwindConfig: './some/file/js',
+			purgeConfig: {},
+			presetEnvConfig: {},
+			shouldPurge: true,
+			shouldImport: true,
+			shouldTimeTravel: true,
+		}
+	}
+  ]
 }
 ```
 If you don't supply a config file path, Tailwind defaults will be used.
