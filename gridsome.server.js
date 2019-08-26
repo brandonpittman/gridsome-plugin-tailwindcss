@@ -60,6 +60,9 @@ TailwindPlugin.defaultOptions = () => ({
       './src/**/*.svg',
     ],
     whitelist: [
+      /shiki/,
+      /prism/,
+      /markdown/,
       'body',
       'html',
       'img',
