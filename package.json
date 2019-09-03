@@ -4,7 +4,7 @@
 	"description": "Add Tailwind to a Gridsome project.",
 	"main": "gridsome.server.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"test": "xo"
 	},
 	"repository": {
 		"type": "git",
@@ -31,5 +31,8 @@
 		"postcss-import": "^12.0.1",
 		"postcss-preset-env": "^6.7.0",
 		"tailwindcss": "latest"
+	},
+	"devDependencies": {
+		"xo": "^0.24.0"
 	}
 }
