@@ -1,3 +1,3 @@
-import 'tailwindcss/tailwind.css'
+import 'tailwindcss/tailwind.css';
 
-export default function() {}
+export default function () {}
