@@ -60,9 +60,6 @@ TailwindPlugin.defaultOptions = () => ({
       './src/**/*.svg',
     ],
     whitelist: [
-      /shiki/,
-      /prism/,
-      /markdown/,
       'body',
       'html',
       'img',
@@ -72,6 +69,11 @@ TailwindPlugin.defaultOptions = () => ({
       'g-image--loaded',
       'active',
       'active--exact'
+    ],
+    whitelistPatterns: [
+      /shiki/,
+      /prism/,
+      /markdown/,
     ],
     defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || [],
   },
