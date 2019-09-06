@@ -35,6 +35,7 @@ modules.exports = {
 			shouldPurge: true,
 			shouldImport: true,
 			shouldTimeTravel: true,
+			shouldPurgeUnusedKeyframes: true,
 		}
 	}
   ]
