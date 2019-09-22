@@ -19,25 +19,29 @@ function TailwindPlugin(api, options) {
   const purgecss = require("@fullhuman/postcss-purgecss")(purgeConfig);
 
   api.chainWebpack(config => {
-    config.module
-      .rule("css")
-      .oneOf("normal")
-      .use("postcss-loader")
-      .tap(options => {
-        options.plugins.unshift(
-          ...[
-            shouldImport && postcssImport,
-            tailwind,
-            shouldTimeTravel && postcssPresetEnv
-          ]
-        );
+    // I'm giving into peer pressure.
+    ['css', 'scss', 'sass', 'less', 'stylus', 'postcss'].forEach(lang => {
+      config.module
+        .rule(lang)
+        .oneOf("normal")
+        .use("postcss-loader")
+        .tap(options => {
+          options.plugins.unshift(
+            ...[
+              shouldImport && postcssImport,
+              tailwind,
+              shouldTimeTravel && postcssPresetEnv
+            ]
+          );
 
-        process.env.NODE_ENV === "production" &&
-          shouldPurge &&
-          options.plugins.push(purgecss);
+          process.env.NODE_ENV === "production" &&
+            shouldPurge &&
+            options.plugins.push(purgecss);
 
-        return options;
-      });
+          return options;
+        });
+
+    })
   });
 }
 
@@ -78,4 +82,3 @@ TailwindPlugin.defaultOptions = () => ({
 });
 
 module.exports = TailwindPlugin;
-
