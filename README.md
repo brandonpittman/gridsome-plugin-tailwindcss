@@ -29,15 +29,15 @@ modules.exports = {
     {
 			use: 'gridsome-plugin-tailwindcss',
 			options: {
-        tailwindConfig: './some/file/js',
-        purgeConfig: {},
-        presetEnvConfig: {},
-        shouldPurge: true,
-        shouldImport: true,
-        shouldTimeTravel: true,
-        shouldPurgeUnusedKeyframes: true,
-		  }
-	}
+        	tailwindConfig: './some/file/js',
+	        purgeConfig: {},
+        	presetEnvConfig: {},
+	        shouldPurge: true,
+        	shouldImport: true,
+	        shouldTimeTravel: true,
+        	shouldPurgeUnusedKeyframes: true,
+			}
+		}
   ]
 }
 ```
