@@ -42,6 +42,7 @@ modules.exports = {
 ```
 If you don't supply a config file path, Tailwind defaults will be used.
 
+
 The following PostCSS plugins are also included with this plugin:
 
 ## PurgeCSS
