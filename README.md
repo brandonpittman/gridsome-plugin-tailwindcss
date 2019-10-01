@@ -26,17 +26,17 @@ To use this plugin, run `npm install -D gridsome-plugin-tailwindcss` add the fol
 ```javascript
 modules.exports = {
 	plugins: [
-		{
+    {
 			use: 'gridsome-plugin-tailwindcss',
 			options: {
-			tailwindConfig: './some/file/js',
-			purgeConfig: {},
-			presetEnvConfig: {},
-			shouldPurge: true,
-			shouldImport: true,
-			shouldTimeTravel: true,
-			shouldPurgeUnusedKeyframes: true,
-		}
+        tailwindConfig: './some/file/js',
+        purgeConfig: {},
+        presetEnvConfig: {},
+        shouldPurge: true,
+        shouldImport: true,
+        shouldTimeTravel: true,
+        shouldPurgeUnusedKeyframes: true,
+		  }
 	}
   ]
 }
