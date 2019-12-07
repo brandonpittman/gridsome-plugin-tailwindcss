@@ -23,7 +23,7 @@ Long answer, read the Tailwind docs on [creating plugins][plugins] and use
 To use this plugin, run `npm install -D gridsome-plugin-tailwindcss` add the following to your `gridsome.config.js`.
 
 ```javascript
-modules.exports = {
+module.exports = {
   plugins: [
     {
       use: 'gridsome-plugin-tailwindcss',
