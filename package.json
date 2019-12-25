@@ -7,7 +7,7 @@
     "test": "xo"
   },
   "files": [
-    "gridsome.config.js",
+    "gridsome.client.js",
     "gridsome.server.js"
   ],
   "repository": {
