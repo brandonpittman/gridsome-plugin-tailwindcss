@@ -8,8 +8,7 @@
   },
   "files": [
     "gridsome.client.js",
-    "gridsome.server.js",
-    "README.me"
+    "gridsome.server.js"
   ],
   "repository": {
     "type": "git",
