@@ -34,8 +34,7 @@ module.exports = {
         presetEnvConfig: {},
         shouldPurge: true,
         shouldImport: true,
-        shouldTimeTravel: true,
-        shouldPurgeUnusedKeyframes: true,
+        shouldTimeTravel: true
       }
       */
     }

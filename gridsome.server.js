@@ -15,7 +15,6 @@ function TailwindPlugin(api, options) {
 		require('tailwindcss');
 
 	const postcssPresetEnv = require('postcss-preset-env')(presetEnvConfig);
-
 	const purgecss = require('@fullhuman/postcss-purgecss')(purgeConfig);
 
 	api.chainWebpack(config => {
@@ -55,6 +54,7 @@ TailwindPlugin.defaultOptions = () => ({
 		autoprefixer: false
 	},
 	purgeConfig: {
+		keyframes: true,
 		content: [
 			'./src/**/*.vue',
 			'./src/**/*.js',
@@ -77,6 +77,11 @@ TailwindPlugin.defaultOptions = () => ({
 			'active',
 			'active--exact'
 		],
+    whitelistPatterns: [
+      /shiki/,
+      /prism/,
+      /markdown/,
+    ],
 		defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || []
 	}
 });
