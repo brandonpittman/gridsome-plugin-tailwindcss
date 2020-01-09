@@ -3,9 +3,6 @@
   "version": "2.2.31",
   "description": "Add Tailwind to a Gridsome project.",
   "main": "gridsome.server.js",
-  "scripts": {
-    "test": "xo"
-  },
   "files": [
     "gridsome.client.js",
     "gridsome.server.js"
