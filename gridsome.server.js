@@ -81,6 +81,8 @@ TailwindPlugin.defaultOptions = () => ({
       /shiki/,
       /prism/,
       /markdown/,
+      /.*-(enter|enter-active|enter-to|leave|leave-active|leave-to)/,
+      /data-v-.*/
     ],
 		defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || []
 	}
