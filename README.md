@@ -8,7 +8,7 @@ If you want to set up Tailwind with the least amount of effort in a Gridsome
 project, this is for you. If you want to lean in to the *Way of
 Tailwind*&mdash;using `tailwind.config.js` or keep your CSS inside your Vue
 files' style blocks&mdash;this is the plugin for you. If you want to have a
-global CSS file and dump a bunch of crap in their, you'll wind up fighting this
+global CSS file and dump a bunch of crap in there, you'll wind up fighting this
 plugin.
 
 ## Usage
