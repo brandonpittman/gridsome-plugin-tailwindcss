@@ -1,10 +1,19 @@
 # gridsome-plugin-tailwindcss
 
-[Example project](http://github.com/brandonpittman/gridsome-plugin-tailwindcss-ffs)
+This plugin will add [Tailwind](http://tailwindcss.com) to your [Gridsome](http://gridsome.org) project.
 
-This plugin will add [Tailwind](http://tailwindcss.com) to your
-[Gridsome](http://gridsome.org) project. I've gone ahead and automatically
-imported the default `tailwind.css` file from the Tailwind npm package. It's just add a CSS file that includes:
+## Who's This For?
+
+If you want to set up Tailwind with the least amount of effort in a Gridsome
+project, this is for you. If you want to lean in to the *Way of
+Tailwind*&mdash;using `tailwind.config.js` or keep your CSS inside your Vue
+files' style blocks&mdash;this is the plugin for you. If you want to have a
+global CSS file and dump a bunch of crap in their, you'll wind up fighting this
+plugin.
+
+## Usage
+
+I've gone ahead and automatically imported the default `tailwind.css` file from the Tailwind npm package. It's just add a CSS file that includes:
 
 ```postcss
 @tailwind base;
@@ -63,6 +72,10 @@ With this one plugin, you should be ready to use Tailwind right away. Keep your
 customization to `tailwind.config.js` whenever possible, but you can use the
 full power of Tailwind (including `@apply`) in your Vue components when
 necessary.
+
+## Examples
+
+- [Example project](http://github.com/brandonpittman/gridsome-plugin-tailwindcss-ffs)
 
 Happy coding!
 
