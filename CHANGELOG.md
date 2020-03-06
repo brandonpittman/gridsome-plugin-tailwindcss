@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+## [2.2.38] - 2020-03-06
+
+### Fixed
+
+- Fix error occurring when disabling PostCSS plugins.
+
 ## [2.2.37] - 2020-03-06
 
 ### Changed
