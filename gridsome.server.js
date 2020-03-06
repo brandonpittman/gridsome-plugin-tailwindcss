@@ -18,19 +18,20 @@ function TailwindPlugin(api, options) {
   const purgecss = require('@fullhuman/postcss-purgecss')(purgeConfig);
 
   api.chainWebpack(config => {
-    // I'm giving into peer pressure.
     ['css', 'scss', 'sass', 'less', 'stylus', 'postcss'].forEach(lang => {
       config.module
         .rule(lang)
         .oneOf('normal')
         .use('postcss-loader')
         .tap(options => {
+
+          let pluginsToAdd = [];
+          shouldImport ? pluginsToAdd.push(postcssImport) : true
+          pluginsToAdd.push(tailwind)
+          shouldTimeTravel ? pluginsToAdd.push(postcssPresetEnv) : true
+
           options.plugins.unshift(
-            ...[
-              shouldImport && postcssImport,
-              tailwind,
-              shouldTimeTravel && postcssPresetEnv
-            ]
+            ...pluginsToAdd
           );
 
           // eslint-disable-next-line no-unused-expressions
