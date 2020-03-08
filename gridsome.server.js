@@ -49,7 +49,11 @@ TailwindPlugin.defaultOptions = () => ({
   tailwindConfig: undefined,
   presetEnvConfig: {
     stage: 0,
-    autoprefixer: false
+    autoprefixer: false,
+    features: {
+      'focus-visible-pseudo-class': false,
+      'focus-within-pseudo-class': false
+    }
   },
   purgeConfig: {
     keyframes: true,
