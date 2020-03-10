@@ -82,6 +82,7 @@ TailwindPlugin.defaultOptions = () => ({
     whitelistPatterns: [
       /shiki/,
       /prism/,
+      /token$/,
       /markdown/,
       /.*-(enter|enter-active|enter-to|leave|leave-active|leave-to)/,
       /data-v-.*/,
