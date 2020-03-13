@@ -3,19 +3,15 @@ function TailwindPlugin(api, options) {
     tailwindConfig,
     purgeConfig,
     presetEnvConfig,
+    importUrlConfig,
     shouldImport,
     shouldPurge,
     shouldTimeTravel
   } = options;
 
-  const postcssImport = require('postcss-import')();
-
   const tailwind = tailwindConfig ?
     require('tailwindcss')(tailwindConfig) :
     require('tailwindcss');
-
-  const postcssPresetEnv = require('postcss-preset-env')(presetEnvConfig);
-  const purgecss = require('@fullhuman/postcss-purgecss')(purgeConfig);
 
   api.chainWebpack(config => {
     ['css', 'scss', 'sass', 'less', 'stylus', 'postcss'].forEach(lang => {
@@ -25,16 +21,19 @@ function TailwindPlugin(api, options) {
         .use('postcss-loader')
         .tap(options => {
 
-          if (shouldTimeTravel) options.plugins.unshift(postcssPresetEnv)
+          if (shouldTimeTravel) options.plugins.unshift(require('postcss-preset-env')(presetEnvConfig))
 
           options.plugins.unshift(tailwind)
 
-          if (shouldImport) options.plugins.unshift(postcssImport)
+          if (shouldImport) {
+            options.plugins.unshift(require('postcss-import')())
+            options.plugins.unshift(require('postcss-import-url')(importUrlConfig))
+          }
 
           // eslint-disable-next-line no-unused-expressions
-          process.env.NODE_ENV === 'production' &&
-            shouldPurge &&
-            options.plugins.push(purgecss);
+          if (process.env.NODE_ENV === 'production' && shouldPurge) {
+            options.plugins.push(require('@fullhuman/postcss-purgecss')(purgeConfig));
+          }
 
           return options;
         });
@@ -46,6 +45,9 @@ TailwindPlugin.defaultOptions = () => ({
   shouldPurge: true,
   shouldImport: true,
   shouldTimeTravel: true,
+  importUrlConfig: {
+    modernBrowser: true
+  },
   tailwindConfig: undefined,
   presetEnvConfig: {
     stage: 0,
@@ -84,6 +86,8 @@ TailwindPlugin.defaultOptions = () => ({
       /prism/,
       /token$/,
       /markdown/,
+      /rich-text/,
+      /richtext/,
       /.*-(enter|enter-active|enter-to|leave|leave-active|leave-to)/,
       /data-v-.*/,
       />>>/,
