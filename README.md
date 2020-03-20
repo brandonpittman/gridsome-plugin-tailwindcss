@@ -75,6 +75,7 @@ necessary.
 
 ## Examples
 
+- [🍸 Aperitif &mdash; A delectable starter template for your next Gridsome project.](https://github.com/brandonpittman/aperitif)
 - [Example project](http://github.com/brandonpittman/gridsome-plugin-tailwindcss-ffs)
 
 Happy coding!
