@@ -1,8 +1,9 @@
 # gridsome-plugin-tailwindcss
 
-This plugin will add [Tailwind](http://tailwindcss.com) to your [Gridsome](http://gridsome.org) project.
+This plugin will add [Tailwind](http://tailwindcss.com) to your
+[Gridsome](http://gridsome.org) project.
 
-## Who's This For?
+## Who This Is For
 
 If you want to set up Tailwind with the least amount of effort in a Gridsome
 project, this is for you. If you want to lean in to the *Way of
@@ -13,7 +14,8 @@ plugin.
 
 ## Usage
 
-I've gone ahead and automatically imported the default `tailwind.css` file from the Tailwind npm package. It's just add a CSS file that includes:
+I've gone ahead and automatically imported the default `tailwind.css` file from
+the Tailwind npm package. It's just add a CSS file that includes:
 
 ```postcss
 @tailwind base;
@@ -25,20 +27,25 @@ You may be wondering, "Where do I add global CSS?!" Short answer, you don't.
 Long answer, read the Tailwind docs on [creating plugins][plugins] and use
 `tailwind.config.js` to add base styles and create components/utilities there.
 
-**If you need to create `tailwind.config.js`, run `./node_modules/.bin/tailwind init` to create one.**
+**If you need to create `tailwind.config.js`, run `./node_modules/.bin/tailwind
+init` to create one.**
 
 [plugins]: https://tailwindcss.com/docs/plugins/#app
 
-To use this plugin, run `npm install -D gridsome-plugin-tailwindcss` add the following to your `gridsome.config.js`.
+To use this plugin, run `npm install -D gridsome-plugin-tailwindcss` add the
+following to your `gridsome.config.js`.
 
 ```javascript
 module.exports = {
   plugins: [
     {
       use: 'gridsome-plugin-tailwindcss',
-      /* These are the default options. You don't need to set any options to get going.
+      /**
+      * These are the default options. You don't need to set any options to get
+      * going. Seriously, you don't need to declare tailwind.config.js.
+
       options: {
-        tailwindConfig: './some/file/js',
+        tailwindConfig: './tailwind.config.js',
         purgeConfig: {},
         presetEnvConfig: {},
         shouldPurge: true,
@@ -50,23 +57,27 @@ module.exports = {
   ]
 }
 ```
-If you don't supply a config file path, Tailwind defaults will be used.
 
+If you don't supply a config file path, Tailwind defaults will be used.
 
 The following PostCSS plugins are also included with this plugin:
 
 ## PurgeCSS
 
-[PurgeCSS](https://www.purgecss.com/with-postcss) is enabled by default. If you'd like to disable it, pass `shouldPurge:
-false` to the plugin options object.
+[PurgeCSS](https://www.purgecss.com/with-postcss) is enabled by default. If
+you'd like to disable it, pass `shouldPurge:false` to the plugin options
+object.
 
 ## postcss-import
 
-[postcss-import](https://github.com/postcss/postcss-import) included by default. Pass `shouldImport: false` to disable.
+[postcss-import](https://github.com/postcss/postcss-import) included by
+default. Pass `shouldImport: false` to disable.
 
 ## postcss-preset-env
 
-[postcss-preset-env](https://github.com/csstools/postcss-preset-env) included by default. Pass `shouldTimeTravel: false` to disable. You may also pass a config object to the plugin as `presetEnvConfig`.
+[postcss-preset-env](https://github.com/csstools/postcss-preset-env) included
+by default. Pass `shouldTimeTravel: false` to disable. You may also pass a
+config object to the plugin as `presetEnvConfig`.
 
 With this one plugin, you should be ready to use Tailwind right away. Keep your
 customization to `tailwind.config.js` whenever possible, but you can use the
