@@ -12,6 +12,11 @@ files' style blocks&mdash;this is the plugin for you. If you want to have a
 global CSS file and dump a bunch of crap in there, you'll wind up fighting this
 plugin.
 
+## Install
+
+`npm install -D gridsome-plugin-tailwindcss`
+
+
 ## Usage
 
 I've gone ahead and automatically imported the default `tailwind.css` file from
@@ -32,8 +37,9 @@ init` to create one.**
 
 [plugins]: https://tailwindcss.com/docs/plugins/#app
 
-To use this plugin, run `npm install -D gridsome-plugin-tailwindcss` add the
-following to your `gridsome.config.js`.
+## Customize
+
+Set any options you want to set in `gridsome.config.js`.
 
 ```javascript
 module.exports = {
@@ -58,22 +64,26 @@ module.exports = {
 }
 ```
 
-If you don't supply a config file path, Tailwind defaults will be used.
+**If you don't supply a config file path, Tailwind defaults will be used.**
+
+
+
+## Plugins
 
 The following PostCSS plugins are also included with this plugin:
 
-## PurgeCSS
+### PurgeCSS
 
 [PurgeCSS](https://www.purgecss.com/with-postcss) is enabled by default. If
 you'd like to disable it, pass `shouldPurge:false` to the plugin options
 object.
 
-## postcss-import
+### postcss-import
 
 [postcss-import](https://github.com/postcss/postcss-import) included by
 default. Pass `shouldImport: false` to disable.
 
-## postcss-preset-env
+### postcss-preset-env
 
 [postcss-preset-env](https://github.com/csstools/postcss-preset-env) included
 by default. Pass `shouldTimeTravel: false` to disable. You may also pass a
