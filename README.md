@@ -3,9 +3,9 @@
 This plugin will add [Tailwind](http://tailwindcss.com) to your
 [Gridsome](http://gridsome.org) project.
 
-**Currently working on v3, which will remove the PurgeCSS capability**
+**Currently working on v3, which will remove PurgeCSS capabilities**
 
-*(so you can just use the new features built into Tailwind 1.4+)*
+*(because Tailwind 1.4+ has it baked in)*
 
 ## Who This Is For
 
