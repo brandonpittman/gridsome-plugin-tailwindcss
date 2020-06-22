@@ -1,6 +1,6 @@
 {
   "name": "gridsome-plugin-tailwindcss",
-  "version": "2.2.48",
+  "version": "3.0.1",
   "description": "Add Tailwind to a Gridsome project.",
   "main": "gridsome.server.js",
   "files": [
@@ -17,7 +17,6 @@
     "gridsome-plugin",
     "tailwindcss",
     "postcss",
-    "purgecss",
     "postcss-import",
     "postcss-preset-env"
   ],
@@ -28,8 +27,7 @@
   },
   "homepage": "https://github.com/brandonpittman/gridsome-plugin-tailwindcss#readme",
   "dependencies": {
-    "@fullhuman/postcss-purgecss": "^2.1.2",
-    "postcss": "^7.0.27",
+    "postcss": "^7.0.32",
     "postcss-import": "^12.0.1",
     "postcss-import-url": "^5.1.0",
     "postcss-preset-env": "^6.7.0",
