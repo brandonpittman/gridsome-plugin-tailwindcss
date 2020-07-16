@@ -66,6 +66,22 @@ module.exports = {
 
 The following PostCSS plugins are also included with this plugin:
 
+### postcss-import
+
+[postcss-import](https://github.com/postcss/postcss-import) included by
+default. Pass `shouldImport: false` to disable.
+
+### postcss-preset-env
+
+[postcss-preset-env](https://github.com/csstools/postcss-preset-env) included
+by default. Pass `shouldTimeTravel: false` to disable. You may also pass a
+config object to the plugin as `presetEnvConfig`.
+
+With this one plugin, you should be ready to use Tailwind right away. Keep your
+customization to `tailwind.config.js` whenever possible, but you can use the
+full power of Tailwind (including `@apply`) in your Vue components when
+necessary.
+
 ## Examples
 
 - [🍸 Aperitif &mdash; A delectable starter template for your next Gridsome project.](https://github.com/brandonpittman/aperitif)
