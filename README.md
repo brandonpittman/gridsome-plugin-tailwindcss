@@ -27,6 +27,8 @@ the Tailwind npm package. It's just add a CSS file that includes:
 @tailwind utilities;
 ```
 
+**You do not need to import Tailwind into a CSS file.**
+
 You may be wondering, "Where do I add global CSS?!" Short answer, you don't.
 Long answer, read the Tailwind docs on [creating plugins][plugins] and use
 `tailwind.config.js` to add base styles and create components/utilities there.
