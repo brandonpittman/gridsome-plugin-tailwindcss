@@ -2,7 +2,6 @@ function TailwindPlugin(api, options) {
   const {
     tailwindConfig,
     presetEnvConfig,
-    importUrlConfig,
     shouldImport,
     shouldTimeTravel,
   } = options;
@@ -28,9 +27,6 @@ function TailwindPlugin(api, options) {
 
           if (shouldImport) {
             options.plugins.unshift(require("postcss-import")());
-            options.plugins.unshift(
-              require("postcss-import-url")(importUrlConfig)
-            );
           }
 
           return options;
@@ -42,9 +38,6 @@ function TailwindPlugin(api, options) {
 TailwindPlugin.defaultOptions = () => ({
   shouldImport: true,
   shouldTimeTravel: true,
-  importUrlConfig: {
-    modernBrowser: true,
-  },
   tailwindConfig: undefined,
   presetEnvConfig: {
     stage: 0,
