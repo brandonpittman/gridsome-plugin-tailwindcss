@@ -75,12 +75,12 @@ Install `postcss-import` and pass `shouldImport: true` to enable.
 
 ### postcss-preset-env
 
-Instal `postcss-preset-env` and pass `shouldTimeTravel: true` to enable. You may also pass a
+Install `postcss-preset-env` and pass `shouldTimeTravel: true` to enable. You may also pass a
 config object to the plugin as `presetEnvConfig`.
 
 With this one plugin, you should be ready to use Tailwind right away. Keep your
 customization to `tailwind.config.js` whenever possible, but you can use the
-full power of Tailwind (including `@apply`) in your Vue components when
+full power of Tailwind in your Vue components when
 necessary.
 
 ## Examples
