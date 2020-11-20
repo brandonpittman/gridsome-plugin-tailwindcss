@@ -13,7 +13,7 @@ global CSS file and dump a bunch of shit in there, you should look elsewhere.
 
 ## Install
 
-`npm install -D gridsome-plugin-tailwindcss` tailwindcss@latest postcss-import postcss-preset-env
+`npm install -D gridsome-plugin-tailwindcss` tailwindcss@latest # postcss-import postcss-preset-env (if you want these plugins and you've updated the config)
 
 ## Usage
 
@@ -46,14 +46,13 @@ module.exports = {
     {
       use: "gridsome-plugin-tailwindcss",
       /**
-      * These are the default options. You don't need to set any options to get
-      * going. Seriously, you don't need to declare tailwind.config.js.
+      * These are the default options.
 
       options: {
         tailwindConfig: './tailwind.config.js',
         presetEnvConfig: {},
-        shouldImport: true,
-        shouldTimeTravel: true
+        shouldImport: false,
+        shouldTimeTravel: false
       }
       */
     },
@@ -65,17 +64,15 @@ module.exports = {
 
 ## Plugins
 
-The following PostCSS plugins are also included with this plugin:
+The following PostCSS plugins can be enabled if you install their dependencies.
 
 ### postcss-import
 
-[postcss-import](https://github.com/postcss/postcss-import) included by
-default. Pass `shouldImport: false` to disable.
+Install `postcss-import` and pass `shouldImport: true` to enable.
 
 ### postcss-preset-env
 
-[postcss-preset-env](https://github.com/csstools/postcss-preset-env) included
-by default. Pass `shouldTimeTravel: false` to disable. You may also pass a
+Instal `postcss-preset-env` and pass `shouldTimeTravel: true` to enable. You may also pass a
 config object to the plugin as `presetEnvConfig`.
 
 With this one plugin, you should be ready to use Tailwind right away. Keep your

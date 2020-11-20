@@ -36,16 +36,12 @@ function TailwindPlugin(api, options) {
 }
 
 TailwindPlugin.defaultOptions = () => ({
-  shouldImport: true,
-  shouldTimeTravel: true,
+  shouldImport: false,
+  shouldTimeTravel: false,
   tailwindConfig: undefined,
   presetEnvConfig: {
     stage: 0,
     autoprefixer: false,
-    features: {
-      "focus-visible-pseudo-class": false,
-      "focus-within-pseudo-class": false,
-    },
   },
 });
 
