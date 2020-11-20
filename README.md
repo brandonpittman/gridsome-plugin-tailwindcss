@@ -14,6 +14,8 @@ global CSS file and dump a bunch of shit in there, you should look elsewhere.
 ## Install
 
 `npm install -D gridsome-plugin-tailwindcss tailwindcss@latest` 
+
+
 `npm install -D postcss-import postcss-preset-env #(if you want these plugins and you've updated the config)`
 
 ## Usage
