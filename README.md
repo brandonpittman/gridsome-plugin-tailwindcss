@@ -10,9 +10,10 @@ project, this is for you. If you want to lean in to the _Way of
 Tailwind_&mdash;using `tailwind.config.js` or keep your CSS inside your Vue
 files' style blocks&mdash;this is the plugin for you. If you want to have a
 global CSS file and dump a bunch of shit in there, you should look elsewhere.
+
 ## Install
 
-`npm install -D gridsome-plugin-tailwindcss`
+`npm install -D gridsome-plugin-tailwindcss` tailwindcss@latest postcss-import postcss-preset-env
 
 ## Usage
 

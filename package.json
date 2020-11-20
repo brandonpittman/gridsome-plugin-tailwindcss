@@ -26,14 +26,13 @@
     "url": "https://github.com/brandonpittman/gridsome-plugin-tailwindcss/issues"
   },
   "homepage": "https://github.com/brandonpittman/gridsome-plugin-tailwindcss#readme",
-  "dependencies": {
-    "postcss": "^7.0.32",
-    "postcss-import": "^12.0.1",
-    "postcss-import-url": "^5.1.0",
+  "peerDependencies": {
+    "postcss": "^8.1.8",
+    "postcss-import": "^13.0.0",
     "postcss-preset-env": "^6.7.0",
-    "tailwindcss": ">=1.4"
+    "tailwindcss": ">=2.0"
   },
   "devDependencies": {
-    "prettier": "^2.0.5"
+    "prettier": "^2.1.2"
   }
 }
