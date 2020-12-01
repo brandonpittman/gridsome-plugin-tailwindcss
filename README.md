@@ -1,3 +1,5 @@
+🚨 **If you get errors about PostCSS v8, check out Tailwind's docs for the latest info about the [compat version](https://tailwindcss.com/docs/installation#post-css-7-compatibility-build).**
+
 # gridsome-plugin-tailwindcss
 
 This plugin will add [Tailwind](http://tailwindcss.com) to your
@@ -14,10 +16,6 @@ global CSS file and dump a bunch of shit in there, you should look elsewhere.
 ## Install
 
 `npm install -D gridsome-plugin-tailwindcss tailwindcss@latest` 
-
-
-**If you get errors about PostCSS v8, check out Tailwind's docs for the latest info about the [compat version](https://tailwindcss.com/docs/installation#post-css-7-compatibility-build).**
-
 
 `npm install -D postcss-import postcss-preset-env #(if you want these plugins and you've updated the config)`
 
